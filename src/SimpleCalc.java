@@ -16,11 +16,11 @@ public class SimpleCalc {
         String entrada;
         do{
             System.out.println("Escoja una operación o pulse 0 para salir.");
-            System.out.println("Operaciones: + - x /");
+            System.out.println("Operaciones: + - * /");
             System.out.print("> ");
             entrada = sc.nextLine();
             int n1 = 0, n2 = 0;
-            if("+-x/".contains(entrada)){
+            if("+-*/".contains(entrada)){
                 System.out.print("Operando 1 > ");
                 n1 = sc.nextInt();
                 System.out.print("Operando 2 > ");
@@ -36,8 +36,8 @@ public class SimpleCalc {
                 System.out.println("%d-%d=%d".formatted(n1,n2,n1-n2));
             }
             
-            if(entrada.equals("x")){
-                System.out.println("%dx%d=%d".formatted(n1,n2,n1*n2));
+            if(entrada.equals("*")){
+                System.out.println("%d*%d=%d".formatted(n1,n2,n1*n2));
             }
             
             if(entrada.equals("/")){
